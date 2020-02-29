@@ -67,24 +67,6 @@ Containerization (Docker) of the REST service. If you don't plan to use Docker y
 
 *NOTE: The standard Dockerfile is renamed Dockerfile.txt so that it will match the filtering fileset and be included in the achetype resources.*
 
-## Building and Running
-
-In the project home directory 
-
-    $ mvn clean package
-    $ java -jar service/target/service-<version>-bin.jar options
-    
-    where:  
-        --server.port=####		override the default server listener port of 8080
-Make sure to replace <version> with your build version, for example 1.0.0.Final.
-
-## Generating the archetype
-
-In the project home directory 
-
-    $ mvn archetype:create-from-project
-    $ cd target/generated-sources/archetype
-    $ mvn install
 ## Create a new project from the archetype
 
 In the directory you wish the project to be created
@@ -92,4 +74,15 @@ In the directory you wish the project to be created
     $ mvn archetype:generate -DarchetypeGroupId=org.rnott.samples.microservice \
         -DarchetypeArtifactId=microservice-archetype -DarchetypeVersion=1.0.0.Final \
         -DgroupId=<your-groupId> -DartifactId=<your-artifactId>
+
+## Building and Running
+
+In the newly created project home directory 
+
+    $ mvn clean package
+    $ java -jar service/target/service-<version>-bin.jar options
+    
+    where:  
+        --server.port=####		override the default server listener port of 8080
+Make sure to replace <version> with your build version, for example 1.0.0.Final.
 
