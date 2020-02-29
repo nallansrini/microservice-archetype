@@ -3,6 +3,47 @@ This project provides a Maven archetype to create sample micro-service which con
 
 This project can be customized directly but you should consider customizing the [source project](https://github.com/rnott/sample-microservices) that generates this archetype and following the instructions there.
 
+## Stack
+
+This project uses the following frameworks and libraries:
+
+- Java 11 (compatible)
+- SpringBoot (application container)
+- Undertow (web container)
+- Jersey (JAX-RS)
+- Hibernate (JPA)
+- SLF4J (logging)
+- Docker componse (service containerization)
+- TestNG (test)
+- H2 (test)
+- Jacoco (test coverage)
+
+## Features
+
+- Java 11 source compatibility
+- Spring runtime environment
+- Executable JAR file format
+- Standard acuators enabled
+- Undertow web tier
+- Standards based implementations
+    - JAX-RS (Jersey)
+    - JPA (Hibernate)
+- Pragmatic resource expansion capabilities (see below)
+- Standardized mapping of exceptions to responses
+- Feature/functional based acceptance testing supporting full automation
+- Code coverage reports
+- Additional quality plugins
+    - OWASP exploit reporting on dependencies
+    - dependency versioning reporting
+
+### Resource expansion
+
+Of special note is the ability to eagerly join lazy associations of resource entities. This pragmatic approach allows a client to minimize the number of service calls required to obtain a full object graph. For example, given an entity relationship of A -> B -> C, it is possible to request /path/A?expand=B(C) and obtain a response containing the full objedt graph.
+
+## Caching
+
+This project **does not** implement nor enable caching. Instead, it is proposed that one should make use of web cache (web server, web proxy, load balancer, etc) as it will almost certainly be more effience and performant than any service based cache.
+
 ## Structure
 
 The project is implemented as a Maven multi-module project with the following modules
