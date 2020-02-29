@@ -1,10 +1,7 @@
-# Sample Micro-service
-This project provides a sample micro-service which contains an opinionated structure, technology stack, useful utilities and base classes and best practice based composition. 
+# Maven Archetype for Micro-services
+This project provides a Maven archetype to create sample micro-service which contains an opinionated structure, technology stack, useful utilities and base classes and best practice based composition. Its use can help ensure that all your micro-services conform to the same architectural principals.
 
-This project can be used as is but is intended to provide the source material for a Maven
-archetype which can be used to ensure that all your micro-services conform to the same architectural principals.
-
-If you wish to customize the archetype, you should fork/clone this project, make the desired customizations, then generate the archetype. If you simply want to use the archetype without customizations, you can clone the archetype and follow the instructions for creating new projects.
+This project can be customized directly but you should consider customizing the [source project](https://github.com/rnott/sample-microservices) that generates this archetype and following the instructions there.
 
 ## Structure
 
